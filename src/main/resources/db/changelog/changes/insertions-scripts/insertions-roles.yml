@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: your_username
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: "1"  # ID for ROLE_USER
+              - column:
+                  name: role
+                  value: 'ROLE_USER'
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: "2"  # ID for ROLE_ADMIN
+              - column:
+                  name: role
+                  value: 'ROLE_ADMIN'

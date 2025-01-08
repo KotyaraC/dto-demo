@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: your_username
+      changes:
+        - insert:
+            tableName: users_roles
+            columns:
+              - column:
+                  name: user_id
+                  valueComputed: "UNHEX(REPLACE('b51d14db-c768-4a5e-bacb-2dce73cb2401', '-', ''))"
+              - column:
+                  name: role_id
+                  value: "1"  # ID for ROLE_USER
+  - changeSet:
+      id: 2
+      author: your_username
+      changes:
+        - insert:
+            tableName: users_roles
+            columns:
+              - column:
+                  name: user_id
+                  valueComputed: "UNHEX(REPLACE('e3f041d4-2877-4683-81b7-c6a3bc1d58b6', '-', ''))"
+              - column:
+                  name: role_id
+                  value: "2"  # ID for ROLE_ADMIN

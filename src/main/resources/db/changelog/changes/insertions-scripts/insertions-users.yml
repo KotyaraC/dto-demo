@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: your_username
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('b51d14db-c768-4a5e-bacb-2dce73cb2401')"
+              - column:
+                  name: email
+                  value: 'user@example.com'
+              - column:
+                  name: password
+                  value: '$2a$10$j3gE7NJOmNem8CRcUvWcDeofS6hk'
+  - changeSet:
+      id: 3
+      author: your_username
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueComputed: "UUID_TO_BIN('e3f041d4-2877-4683-81b7-c6a3bc1d58b6')"
+              - column:
+                  name: email
+                  value: 'admin@example.com'
+              - column:
+                  name: password
+                  value: '$2a$10$j3gE7NJOmNem8CRcUvWcDeofS6hk'
